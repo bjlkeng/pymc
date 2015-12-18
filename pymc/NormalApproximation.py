@@ -368,7 +368,11 @@ class MAP(Model):
                   )  # log-likelihood of observed stochastics
         self.lnL = lnL
         self.AIC = 2. * (self.len - lnL)  # 2k - 2 ln(L)
-        self.AICc = self.AIC + ((2 * self.len * (self.len + 1)) / float(self.data_len - self.len - 1))
+        try:
+            self.AICc = self.AIC + ((2 * self.len * (self.len + 1)) / float(self.data_len - self.len - 1))
+        except ZeroDivisionError:
+            self.AICc = -Inf
+
         try:
             self.BIC = self.len * log(
                 self.data_len) - 2. * lnL  # k ln(n) - 2 ln(L)
