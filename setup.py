@@ -150,6 +150,7 @@ if __name__ == '__main__':
             from distutils.core import setup
     else:
         from numpy.distutils.core import setup
+        config = config_hack()
         metadata.update(config)
 
     setup(**metadata)
