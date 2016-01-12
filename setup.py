@@ -101,7 +101,7 @@ if __name__ == '__main__':
     except:
         build_requires = ['numpy>=1.8']
 
-    meta(  version="2.3.6",
+    metadata = dict(  version="2.3.6",
             description="Markov Chain Monte Carlo sampling toolkit.",
             author="Christopher Fonnesbeck, Anand Patil and David Huard",
             author_email="fonnesbeck@gmail.com ",
