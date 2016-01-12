@@ -133,8 +133,7 @@ if __name__ == '__main__':
             ``pymc`` only requires ``NumPy``. All other dependencies such as ``matplotlib``,
             ``SciPy``, ``pytables``, ``sqlite`` or ``mysql`` are optional.
             """,
-            packages=["pymc", "pymc/database", "pymc/examples", "pymc/examples/gp", "pymc/tests", "pymc/gp", "pymc/gp/cov_funs"],
-            **(config_dict))
+            packages=["pymc", "pymc/database", "pymc/examples", "pymc/examples/gp", "pymc/tests", "pymc/gp", "pymc/gp/cov_funs"])
 
 
     if len(sys.argv) >= 2 and ('--help' in sys.argv[1:] or
