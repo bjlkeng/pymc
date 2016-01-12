@@ -4,11 +4,11 @@
 # tests inside of egg packages, so it is useful to be able to install without eggs as needed.
 
 from __future__ import print_function
+import os, sys
 
 def config_hack():
     from numpy.distutils.misc_util import Configuration
     from numpy.distutils.system_info import get_info
-    import os, sys
     
     config = Configuration('pymc',parent_package=None,top_path=None)
     dist = sys.argv[1]
