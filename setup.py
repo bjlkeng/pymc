@@ -85,7 +85,7 @@ def config_hack():
     extra_info=lapack_info)
     
     config.add_extension(name='gp.cov_funs.distances',sources=['pymc/gp/cov_funs/distances.f'], extra_info=lapack_info)
-    return config
+    return config.todict()
 
 
 if __name__ == '__main__':
